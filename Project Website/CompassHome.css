@@ -70,6 +70,11 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Adventure Cards Headings */
+.card h2 {
+  color: maroon;  /* Makes the headings maroon */
+}
+
 .feature-destination {
   background-color: #ffffff;
   padding: 1rem;
