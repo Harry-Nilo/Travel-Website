@@ -1,11 +1,9 @@
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Apply a background and font to the entire page */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
@@ -15,7 +13,6 @@ body {
     height: 100vh;
 }
 
-/* Container for the form */
 .container {
     background-color: #fff;
     padding: 30px;
@@ -25,7 +22,6 @@ body {
     max-width: 400px;
 }
 
-/* Style the form title */
 h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -34,7 +30,6 @@ h2 {
     color: #002D72;
 }
 
-/* Style the input fields */
 input[type="text"], input[type="email"], input[type="password"] {
     width: 100%;
     padding: 12px;
@@ -46,13 +41,11 @@ input[type="text"], input[type="email"], input[type="password"] {
     transition: border-color 0.3s;
 }
 
-/* Focus effect on input fields */
 input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
     border-color: #002D72;
     outline: none;
 }
 
-/* Style the submit button */
 button[type="submit"] {
     width: 100%;
     padding: 12px;
@@ -67,12 +60,10 @@ button[type="submit"] {
     margin-bottom: 20px;
 }
 
-/* Hover effect on the button */
 button[type="submit"]:hover {
     background-color: #001a4b;
 }
 
-/* Style for links */
 a {
     text-decoration: none;
     color: #002D72;
@@ -83,7 +74,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Style the bottom text */
 p {
     text-align: center;
     font-size: 14px;
@@ -94,7 +84,6 @@ p {
     margin-top: 1px;
 }
 
-/* Style the password container */
 .password-container {
     position: relative;
     width: 100%;
