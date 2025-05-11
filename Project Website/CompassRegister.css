@@ -1,0 +1,122 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background and font to the entire page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the form */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Style the form title */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #002D72;
+}
+
+/* Style the input fields */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+/* Focus effect on input fields */
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #002D72;
+    outline: none;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #002D72;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+/* Hover effect on the button */
+button[type="submit"]:hover {
+    background-color: #001a4b;
+}
+
+/* Style for links */
+a {
+    text-decoration: none;
+    color: #002D72;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style the bottom text */
+p {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.container p:last-child {
+    margin-top: 1px;
+}
+
+/* Style the password container */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 70px; /* space for show button */
+}
+
+.show-password {
+    position: absolute;
+    right: 10px;
+    top: 38%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: #002D72;
+    cursor: pointer;
+}
+
+.show-password:hover {
+    color: #001a4b;
+}
