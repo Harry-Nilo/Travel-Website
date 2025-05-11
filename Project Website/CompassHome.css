@@ -70,7 +70,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Adventure Cards Headings */
 .card h2 {
   color: maroon;  /* Makes the headings maroon */
 }
@@ -94,7 +93,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Styling for the Yosemite heading */
 .feature-destination h3 {
   color: maroon;  /* Yosemite in maroon */
   font-size: 1.5rem;
@@ -102,7 +100,6 @@ body {
   margin-bottom: 0.25rem; /* Adjust this to reduce the space below */
 }
 
-/* Styling for the rock-climber image */
 .rock-climber {
   width: 378px;  /* Set the desired width */
   height: auto;  /* Automatically adjust the height to maintain aspect ratio */
@@ -110,7 +107,6 @@ body {
   margin-bottom: 0.5rem; /* Adds space below the image */
 }
 
-/* Styling for the more details image */
 .more-details {
   width: 150px;  /* Set the desired width for the More Details image */
   height: auto;  /* Maintain aspect ratio */
@@ -119,7 +115,6 @@ body {
   margin-top: 1rem; /* Optional: adds space above the image */
 }
 
-/* Styling for the Experts only paragraph */
 .feature-destination .details {
   margin-top: 0;  /* Remove or reduce space above the paragraph */
   margin-bottom: 1rem; /* You can adjust this value to set the desired space below */
