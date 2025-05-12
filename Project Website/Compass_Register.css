@@ -6,7 +6,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background: url('images/CompassBG.jpeg') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,10 +15,11 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: rgba(214, 240, 244, 0.7);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #333; /* Dark border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     width: 100%;
     max-width: 400px;
 }
