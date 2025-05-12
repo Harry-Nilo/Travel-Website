@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Compass Register</title>
-    <link rel="stylesheet" href="CompassRegister.css">
+    <link rel="stylesheet" href="Compass_Register.css">
 </head>
 <body>
     <div class="container">
