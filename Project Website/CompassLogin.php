@@ -14,7 +14,7 @@
     <button type="button" class="show-password" onclick="togglePassword()">Show</button>
 </div>
             <button type="submit">Login</button>
-            <p>Forgot your password? <a href="CompassForgotPassword.php">Reset Password</a></p>
+            <p>Forgot your password? <a href="CompassForgetPass.php">Reset Password</a></p>
             <p>Don't have an account? <a href="CompassRegister.php">Register here</a></p>
         </form>
     </div>
