@@ -1,7 +1,7 @@
 <?php
 function getDatabaseConnection() {
     $host = 'localhost';
-    $db = 'compasssite';
+    $db = 'user_auth';
     $user = 'root';
     $pass = '';
 
