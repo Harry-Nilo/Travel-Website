@@ -108,81 +108,93 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Forgot Password</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #74ebd5, #ACB6E5);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .forgot-container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-            width: 100%;
-            max-width: 400px;
-            animation: fadeIn 0.6s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        input {
-            width: 93%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 16px;
-        }
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 6px;
-            color: #fff;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .error, .success {
-            font-size: 14px;
-            margin-bottom: 15px;
-            padding: 10px;
-            border-radius: 6px;
-        }
-        .error {
-            background-color: #f8d7da;
-            color: #721c24;
-        }
-        .success {
-            background-color: #d4edda;
-            color: #155724;
-        }
-        .reset-link {
-            display: block;
-            text-align: center;
-            margin-top: 15px;
-            font-weight: bold;
-            color: #007BFF;
-        }
-        .reset-link:hover {
-            text-decoration: underline;
-        }
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('images/CompassBG.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.forgot-container {
+    background-color: rgba(214, 240, 244, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #333; /* Dark border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #002D72;
+}
+
+input {
+    width: 93%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #002D72;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #001a4b;
+}
+
+.error, .success {
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.reset-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #002D72;
+}
+
+.reset-link:hover {
+    text-decoration: underline;
+}
+
     </style>
 </head>
 <body>
