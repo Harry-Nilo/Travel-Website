@@ -16,8 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = "All fields are required.";
     } elseif ($new_password !== $confirm_password) {
         $errors[] = "Passwords do not match.";
-    } elseif (strlen($new_password) < 8) {
-        $errors[] = "Password must be at least 8 characters long.";
+    } elseif (!preg_match('/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}/', $new_password)) {
+        $errors[] = "Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.";
     } else {
         try {
             $pdo = getDatabaseConnection();
@@ -32,9 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
                 $stmt = $pdo->prepare("UPDATE users SET password = :password, reset_token = NULL, reset_token_expiry = NULL WHERE id = :id");
                 $stmt->execute([
-                'password' => $hashed_password,
-                'id' => $user['id']
-            ]);
+                    'password' => $hashed_password,
+                    'id' => $user['id']
+                ]);
 
                 $success = "Your password has been reset successfully. You can now <a href='CompassLogin.php'>log in</a>.";
             } else {
@@ -54,36 +54,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Reset Password</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-       body {
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: url('images/CompassBG.jpeg') no-repeat center center fixed;
     background-size: cover;
+    margin: 0;
+    padding: 40px 15px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow-y: auto;
 }
 
 .reset-container {
-     background-color: rgba(214, 240, 244, 0.7);
+    background-color: rgba(214, 240, 244, 0.7);
     padding: 30px;
     border-radius: 10px;
-    border: 2px solid #333; /* Dark border */
+    border: 2px solid #333;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     width: 100%;
     max-width: 400px;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 h1 {
@@ -93,7 +89,7 @@ h1 {
 }
 
 input {
-    width: 93%;
+    width: 100%;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -134,7 +130,31 @@ button:hover {
     background-color: #d4edda;
     color: #155724;
 }
-    </style>
+
+@media screen and (max-width: 480px) {
+    .reset-container {
+        padding: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+/* Vertically center on large screens unless zoomed in */
+@media screen and (min-height: 700px) and (min-width: 500px) {
+    body {
+        align-items: center;
+        padding-top: 0;
+    }
+}
+</style>
+
 </head>
 <body>
 <div class="reset-container">
