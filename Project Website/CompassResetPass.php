@@ -16,8 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = "All fields are required.";
     } elseif ($new_password !== $confirm_password) {
         $errors[] = "Passwords do not match.";
-    } elseif (strlen($new_password) < 8) {
-        $errors[] = "Password must be at least 8 characters long.";
+    } elseif (!preg_match('/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}/', $new_password)) {
+        $errors[] = "Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.";
     } else {
         try {
             $pdo = getDatabaseConnection();
@@ -32,9 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
                 $stmt = $pdo->prepare("UPDATE users SET password = :password, reset_token = NULL, reset_token_expiry = NULL WHERE id = :id");
                 $stmt->execute([
-                'password' => $hashed_password,
-                'id' => $user['id']
-            ]);
+                    'password' => $hashed_password,
+                    'id' => $user['id']
+                ]);
 
                 $success = "Your password has been reset successfully. You can now <a href='CompassLogin.php'>log in</a>.";
             } else {
