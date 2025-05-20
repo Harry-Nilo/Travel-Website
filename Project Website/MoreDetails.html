@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="MoreDetails.css">
+  <title>More Details</title>
+</head>
+<body>
+  <header class="header">
+    <img src="images/compass_logo.gif" alt="Compass Logo" class="logo">
+    <nav class="nav">
+      <a href="TripPlanner.html"><img src="images/MenuTripPlanner.gif" alt="Trip Planner"></a>
+      <a href="#destinations"><img src="images/MenuDestinations.gif" alt="Destinations"></a>
+      <a href="#travel-logs"><img src="images/MenuTravelLogs.gif" alt="Travel Logs"></a>
+    </nav>
+  </header>
+
+<main class="container">
+    <aside class="sidebar">
+      <h2>Package Includes:</h2>
+      <ul>
+        <li>✈️ Airfare</li>
+        <li>🍴 Food</li>
+        <li>🏨 Lodging</li>
+        <li>🗺️ Local Guide</li>
+      </ul>
+      <div class="extras">
+        <button class="view-photos">📷 View Photos</button>
+        <span class="toggle-things">▶ Other Things To Do</span>
+        <p class="things-content">Check out local hotspots near your hotel. Great eats and hangout spots await!</p>
+        <div class="photo-viewer"></div>
+      </div>
+    </aside>
+
+    <div class="details-list">
+        <section class="details">
+          <h2>California Surf Safari <span class="price">$960 · 5 Nights</span></h2>
+          <div class="slideshow">
+            <img id="slideshow-img" src="images/surfing.jpg" alt="California Surf Safari" class="feature-image">
+            <button class="slide-btn" id="prev-slide">&#8592;</button>
+            <button class="slide-btn" id="next-slide">&#8594;</button>
+         </div>
+          <p>Summertime in southern California, what could be better? Let us know what you're looking for and we'll find it. Big, fast waves or gentle rollers? Beach breaks or point breaks? California's got it all. Sign up now before summer ends!</p>
+          <p>Stay at the centrally located Newport Bonita in Newport Beach. From there, hit the waves at Trestles, Malibu, The Wedge, and other iconic surf spots — or enjoy the local beach breaks.</p>
+        </section>
+
+        <section class="details">
+          <h2>New Zealand's Upper Hutt <span class="price">$1490 · 3 Days</span></h2>
+          <div class="slideshow">
+            <img id="slideshow-nz-img" src="images/Upper_Hut.jpg" alt="Biking in New Zealand" class="feature-image">
+            <button class="slide-btn" id="prev-slide-nz">&#8592;</button>
+            <button class="slide-btn" id="next-slide-nz">&#8594;</button>
+          </div>
+          <p>The Karapoti Trail, home to the Trek Karapoti Classic, twists around the Akatarawa Range and delivers 31 miles of technical single track and challenging fire road climbs. During the ride, there are several tracks to soothe those legs while you reward your burning legs by taking a quick breather.</p>
+          <p>Upper Hutt is New Zealand’s mountain biking hub, and if you're looking for a group ride, stop by Mountain Trails bike shop. Or if you want a number plate on your handlebar, the Trek Karapoti Classic is scheduled for March 4, 2001.</p>
+        </section>
+
+        <section class="details">
+          <h2>Devils Tower Getaway <span class="price">$740 · 5 Days</span></h2>
+          <div class="slideshow">
+            <img id="slideshow-dt-img" src="images/devils_tower.jpg" alt="Climbing Devils Tower" class="feature-image">
+            <button class="slide-btn" id="prev-slide-dt">&#8592;</button>
+            <button class="slide-btn" id="next-slide-dt">&#8594;</button>
+          </div>
+          <p>Wyoming’s climbing Mecca, Devils Tower, stands 865 feet above the plain and offers the beginner or the expert climber a great challenge (the first ascent was in 1893 and it was declared a national monument in 1906).</p>
+          <p>President Teddy Roosevelt named Devils Tower the first national monument in 1906. Today, the park hosts approximately 500,000 visitors annually. But beware, environmentalists are trying to limit that number, so treat the park with respect.</p>
+        </section>
+    </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Travel Compass. All rights reserved.</p>
+</footer>
+
+<div id="photo-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);justify-content:center;align-items:center;">
+    <img id="modal-img" src="" alt="Full Photo" style="max-width:90vw;max-height:90vh;border-radius:10px;box-shadow:0 4px 24px rgba(0,0,0,0.5);">
+</div>
+
+<script>
+    // Sidebar photo viewer
+    const viewPhotosBtn = document.querySelector('.view-photos');
+    const photoViewer = document.querySelector('.photo-viewer');
+    const photoModal = document.getElementById('photo-modal');
+    const modalImg = document.getElementById('modal-img');
+
+    const images = [
+      { src: "images/surfing.jpg", alt: "California Surf Safari" },
+      { src: "images/surfing1.jpg", alt: "Surfing in California" },
+      { src: "images/surfing2.jpg", alt: "By the Rocks" },
+      { src: "images/Upper_Hut.jpg", alt: "New Zealand's Upper Hutt" },
+      { src: "images/Upper_Hut2.jpg", alt: "Mountain Biking Trail" },
+      { src: "images/Upper_Hut3.jpg", alt: "Group Ride in Upper Hutt" },
+      { src: "images/devils_tower.jpg", alt: "Devils Tower Getaway" },
+      { src: "images/devils_tower2.jpg", alt: "Climbing Devils Tower" },
+      { src: "images/devils_tower3.jpg", alt: "Devils Tower Climb" }
+    ];
+
+    let photosOpen = false;
+
+    viewPhotosBtn.addEventListener('click', () => {
+        if (!photosOpen) {
+            photoViewer.innerHTML = images.map(img =>
+              `<img src="${img.src}" alt="${img.alt}" tabindex="0">`
+            ).join('');
+            photoViewer.querySelectorAll('img').forEach(img => {
+              img.addEventListener('click', () => {
+                modalImg.src = img.src;
+                modalImg.alt = img.alt;
+                photoModal.style.display = 'flex';
+              });
+            });
+            viewPhotosBtn.textContent = "✖ Close Photos";
+            photosOpen = true;
+        } else {
+            photoViewer.innerHTML = '';
+            viewPhotosBtn.textContent = "📷 View Photos";
+            photosOpen = false;
+        }
+    });
+
+    photoModal.addEventListener('click', () => {
+        photoModal.style.display = 'none';
+        modalImg.src = '';
+    });
+
+    const toggleThings = document.querySelector('.toggle-things');
+    const thingsContent = document.querySelector('.things-content');
+    toggleThings.addEventListener('click', () => {
+      thingsContent.classList.toggle('show');
+      if (thingsContent.classList.contains('show')) {
+        toggleThings.textContent = '▼ Hide Details';
+      } else {
+        toggleThings.textContent = '▶ Other Things To Do';
+      }
+    });
+
+    // California slideshow
+    const slideshowImages = [
+      { src: "images/surfing.jpg", alt: "Surfing in California" },
+      { src: "images/surfing1.jpg", alt: "By the Rocks" },
+      { src: "images/surfing2.jpg", alt: "Practice Surfing" }
+    ];
+    let slideIndex = 0;
+    const slideshowImg = document.getElementById('slideshow-img');
+    const prevSlide = document.getElementById('prev-slide');
+    const nextSlide = document.getElementById('next-slide');
+    function showSlide(index) {
+      slideIndex = (index + slideshowImages.length) % slideshowImages.length;
+      slideshowImg.src = slideshowImages[slideIndex].src;
+      slideshowImg.alt = slideshowImages[slideIndex].alt;
+    }
+    if (slideshowImg && prevSlide && nextSlide) {
+      prevSlide.addEventListener('click', () => showSlide(slideIndex - 1));
+      nextSlide.addEventListener('click', () => showSlide(slideIndex + 1));
+    }
+    showSlide(0);
+
+    // New Zealand slideshow
+    const slideshowNZImages = [
+      { src: "images/Upper_Hut.jpg", alt: "Upper Hutt in New Zealand" },
+      { src: "images/Upper_Hut2.jpg", alt: "Mountain Biking Trail" },
+      { src: "images/Upper_Hut3.jpg", alt: "Group Ride in Upper Hutt" }
+    ];
+    let slideNZIndex = 0;
+    const slideshowNZImg = document.getElementById('slideshow-nz-img');
+    const prevSlideNZ = document.getElementById('prev-slide-nz');
+    const nextSlideNZ = document.getElementById('next-slide-nz');
+    function showNZSlide(index) {
+      slideNZIndex = (index + slideshowNZImages.length) % slideshowNZImages.length;
+      slideshowNZImg.src = slideshowNZImages[slideNZIndex].src;
+      slideshowNZImg.alt = slideshowNZImages[slideNZIndex].alt;
+    }
+    if (slideshowNZImg && prevSlideNZ && nextSlideNZ) {
+      prevSlideNZ.addEventListener('click', () => showNZSlide(slideNZIndex - 1));
+      nextSlideNZ.addEventListener('click', () => showNZSlide(slideNZIndex + 1));
+    }
+    showNZSlide(0);
+
+    // Devils Tower slideshow
+    const slideshowDTImages = [
+      { src: "images/devils_tower.jpg", alt: "Climbing Devils Tower" },
+      { src: "images/devils_tower2.jpg", alt: "Devils Tower at Sunset" },
+      { src: "images/devils_tower3.jpg", alt: "Climbers on Devils Tower" }
+    ];
+    let slideDTIndex = 0;
+    const slideshowDTImg = document.getElementById('slideshow-dt-img');
+    const prevSlideDT = document.getElementById('prev-slide-dt');
+    const nextSlideDT = document.getElementById('next-slide-dt');
+    function showDTSlide(index) {
+      slideDTIndex = (index + slideshowDTImages.length) % slideshowDTImages.length;
+      slideshowDTImg.src = slideshowDTImages[slideDTIndex].src;
+      slideshowDTImg.alt = slideshowDTImages[slideDTIndex].alt;
+    }
+    if (slideshowDTImg && prevSlideDT && nextSlideDT) {
+      prevSlideDT.addEventListener('click', () => showDTSlide(slideDTIndex - 1));
+      nextSlideDT.addEventListener('click', () => showDTSlide(slideDTIndex + 1));
+    }
+    showDTSlide(0);
+
+    // Make all main slideshow images clickable for fullscreen
+    [slideshowImg, slideshowNZImg, slideshowDTImg].forEach(img => {
+      if (img) {
+        img.addEventListener('click', () => {
+          modalImg.src = img.src;
+          modalImg.alt = img.alt;
+          photoModal.style.display = 'flex';
+        });
+      }
+    });
+
+    // Track last hovered/focused slideshow for keyboard navigation
+    let currentSlideshow = null;
+    [slideshowImg, slideshowNZImg, slideshowDTImg].forEach(img => {
+      if (img) {
+        img.addEventListener('mouseenter', () => {
+          currentSlideshow = img;
+        });
+        img.addEventListener('focus', () => {
+          currentSlideshow = img;
+        });
+      }
+    });
+
+    slideshowImg.tabIndex = 0;
+    slideshowNZImg.tabIndex = 0;
+    slideshowDTImg.tabIndex = 0;
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Escape") {
+        photoModal.style.display = 'none';
+        modalImg.src = '';
+      }
+
+      if (currentSlideshow === slideshowImg) {
+        if (e.key === "ArrowLeft") showSlide(slideIndex - 1);
+        if (e.key === "ArrowRight") showSlide(slideIndex + 1);
+      }
+      if (currentSlideshow === slideshowNZImg) {
+        if (e.key === "ArrowLeft") showNZSlide(slideNZIndex - 1);
+        if (e.key === "ArrowRight") showNZSlide(slideNZIndex + 1);
+      }
+      if (currentSlideshow === slideshowDTImg) {
+        if (e.key === "ArrowLeft") showDTSlide(slideDTIndex - 1);
+        if (e.key === "ArrowRight") showDTSlide(slideDTIndex + 1);
+      }
+    });
+</script>
+</body>
+</html>
