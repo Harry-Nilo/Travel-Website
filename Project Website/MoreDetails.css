@@ -1,21 +1,108 @@
-body {
-  background: linear-gradient(to right, #1e3a8a, #10b981);
-  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ body {
   margin: 0;
-  padding: 0;
-  color: #000000;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  background-image: url('images/WebsiteBG.jpeg'); 
+  background-size: cover;     
+  background-repeat: no-repeat; 
+  background-position: center; 
+  background-blend-mode: darken;
+  overflow-x: hidden;
 }
 
-.header {
-  background-color: #1f1c1c86;
-  padding: 1rem;
+.navbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: -20px;
+  height: auto; /* changed from fixed 100px */
+  margin-bottom: 2px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px; /* added some vertical padding */
+  box-sizing: border-box;
+  flex-wrap: wrap; /* allow wrapping on extreme zoom */
+  min-height: 80px; /* maintain some min height */
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  gap: 10px;
+  overflow: visible;
+  flex-wrap: wrap; /* allow wrapping */
 }
 
 .logo {
-  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-right: 20px;
+  margin-top: 10px; /* added bottom margin for wrap spacing */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: flex-end;
+  min-width: 200px;
+  flex-wrap: wrap;
+  white-space: normal; /* allow breaking/wrapping */
+  overflow: hidden; /* hide scrollbar completely */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 5px 8px; /* slight padding for better touch */
+}
+
+/* Responsive tweaks remain */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    min-width: auto;
+  }
+  .logo {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-links {
+    justify-content: center;
+    gap: 12px;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  .nav-links a {
+    font-size: 14px;
+  }
 }
 
 .container {
