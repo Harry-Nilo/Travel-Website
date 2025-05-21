@@ -1,45 +1,111 @@
-body {
-  background: linear-gradient(to right, #1e3a8a, #10b981);
-  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ body {
   margin: 0;
-  padding: 0;
-  color: #000000;
-  font-size: 16px; /* Base font size for better scaling */
-  line-height: 1.4;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  background-image: url('images/WebsiteBG.jpeg'); 
+  background-size: cover;     
+  background-repeat: no-repeat; 
+  background-position: center; 
+  background-blend-mode: darken;
+  overflow-x: hidden;
 }
 
-.header {
-  background-color: #ffffff;
-  padding: 1rem;
+.navbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: -20px;
+  height: auto; /* changed from fixed 100px */
+  margin-bottom: 2px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px; /* added some vertical padding */
+  box-sizing: border-box;
+  flex-wrap: wrap; /* allow wrapping on extreme zoom */
+  min-height: 80px; /* maintain some min height */
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping on small screens */
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  gap: 10px;
+  overflow: visible;
+  flex-wrap: wrap; /* allow wrapping */
 }
 
 .logo {
-  height: 50px;
-  max-width: 100%;
-  height: auto;
-}
-
-/* NEW: Make nav images responsive */
-.nav a img {
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 50px; /* Match logo height */
-  object-fit: contain;
-}
-
-.nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #1e3a8a;
+  font-size: 24px;
   font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-right: 20px;
+  margin-top: 10px; /* added bottom margin for wrap spacing */
 }
 
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: flex-end;
+  min-width: 200px;
+  flex-wrap: wrap;
+  white-space: normal; /* allow breaking/wrapping */
+  overflow: hidden; /* hide scrollbar completely */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 5px 8px; /* slight padding for better touch */
+}
+
+/* Responsive tweaks remain */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    min-width: auto;
+  }
+  .logo {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-links {
+    justify-content: center;
+    gap: 12px;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  .nav-links a {
+    font-size: 14px;
+  }
+}
+
+/* PAGE CONTENT BELOW */
 .introduction {
   background-color: #ffffff;
   padding: 1rem;
@@ -62,15 +128,15 @@ body {
 
 .main {
   display: flex;
-  flex-wrap: wrap; /* Wrap columns on smaller screens */
+  flex-wrap: wrap;
   padding: 1rem;
   gap: 1rem;
 }
 
 .left-column,
 .right-column {
-  flex: 1 1 45%; /* Flexible width with basis 45% */
-  min-width: 280px; /* Prevent columns from shrinking too much */
+  flex: 1 1 45%;
+  min-width: 280px;
   box-sizing: border-box;
 }
 
@@ -155,44 +221,61 @@ body {
   .main {
     flex-direction: column;
   }
+
   .left-column,
   .right-column {
     flex: 1 1 100%;
     min-width: auto;
   }
-  .nav a {
-    margin: 0 0.5rem;
-  }
+
   .introduction {
     margin: 0.5rem;
+  }
+
+  /* Keep nav links horizontal but allow wrapping and smaller gaps */
+  .nav-links {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .header {
-    justify-content: center;
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
   }
-  .nav {
-    margin-top: 0.5rem;
-    width: 100%;
-    display: flex;
+
+  .nav-links {
     justify-content: center;
-    gap: 1rem;
+    gap: 12px;
   }
+
   .logo {
-    height: 40px;
+    font-size: 18px;
   }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
   .introduction h1 {
     font-size: 1.4rem;
   }
+
   .introduction p,
   .card p,
   .feature-destination .details {
     font-size: 0.9rem;
   }
+
   .feature-destination h2,
   .feature-destination h3,
   .card h2 {
     font-size: 1.2rem;
   }
 }
+
