@@ -1,88 +1,107 @@
 body {
-  background: linear-gradient(to right, #1e3a8a, #10b981);
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  color: #000000;
-  font-size: 1rem; /* added for better scaling */
-  line-height: 1.4;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  background-image: url('images/WebsiteBG.jpeg'); 
+  background-size: cover;     
+  background-repeat: no-repeat; 
+  background-position: center; 
+  background-blend-mode: darken;
+  overflow-x: hidden;
 }
 
-.header {
-  background-color: #ffffff;
-  padding: 1rem 5vw; /* horizontal padding relative */
+.navbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: -20px;
+  height: auto; /* changed from fixed 100px */
+  margin-bottom: 2px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px; /* added some vertical padding */
+  box-sizing: border-box;
+  flex-wrap: wrap; /* allow wrapping on extreme zoom */
+  min-height: 80px; /* maintain some min height */
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* allow wrapping on smaller screens */
-  min-width: 320px; /* prevent too narrow squeezing */
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  gap: 10px;
+  overflow: visible;
+  flex-wrap: wrap; /* allow wrapping */
 }
 
 .logo {
-  height: auto;          /* remove fixed height */
-  max-height: 50px;      /* max height limit */
-  width: auto;           /* maintain aspect ratio */
-  max-width: 100%;       /* avoid overflow */
-  display: block;
-}
-
-/* Navigation styling */
-.nav {
-  display: flex;
-  flex-wrap: wrap; /* allow nav items to wrap */
-  gap: 0.5rem; /* small gap between nav items */
-  align-items: center;
-}
-
-.nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #1e3a8a;
+  font-size: 24px;
   font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-right: 20px;
+  margin-top: 10px; /* added bottom margin for wrap spacing */
+}
+
+.nav-links {
+  list-style: none;
   display: flex;
-  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: flex-end;
+  min-width: 200px;
+  flex-wrap: wrap;
+  white-space: normal; /* allow breaking/wrapping */
+  overflow: hidden; /* hide scrollbar completely */
 }
 
-.nav a img {
-  max-width: 100%;
-  height: auto;
-  max-height: 40px; /* prevent image from growing too large */
-  display: block;
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 5px 8px; /* slight padding for better touch */
 }
 
-/* On smaller devices, stack nav links vertically */
+/* Responsive tweaks remain */
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
+  .nav-container {
+    flex-wrap: wrap;
   }
-
-  .nav {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 1rem;
-    margin-top: 0.5rem;
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    min-width: auto;
   }
-
-  .nav a {
-    margin: 0;
-    flex: 1 1 auto;
+  .logo {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 }
 
-/* On very small screens or heavy zoom */
 @media (max-width: 480px) {
-  .nav {
-    justify-content: flex-start;
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
   }
-
-  .nav a {
-    flex: 1 1 100%; /* stack nav items vertically */
+  .nav-links {
+    justify-content: center;
+    gap: 12px;
   }
-
-  .nav a img {
-    max-height: 35px;
-    margin: 0 auto;
+  .logo {
+    font-size: 18px;
+  }
+  .nav-links a {
+    font-size: 14px;
   }
 }
 
