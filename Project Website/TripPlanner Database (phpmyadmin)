@@ -2,10 +2,15 @@ CREATE DATABASE IF NOT EXISTS trip_planner_db;
 USE trip_planner_db;
 
 CREATE TABLE IF NOT EXISTS plans (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  city VARCHAR(100) NOT NULL,
-  country VARCHAR(100) NOT NULL,
-  activities TEXT,
-  info_types TEXT,
-  submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    city VARCHAR(100) NOT NULL,
+    country VARCHAR(100) NOT NULL,
+    activities TEXT,
+    info_types TEXT,
+    user_id INT NOT NULL,
+    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_user
+        FOREIGN KEY (user_id)
+        REFERENCES user_auth.users(id)
+        ON DELETE CASCADE
 );
