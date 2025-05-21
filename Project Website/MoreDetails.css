@@ -1,12 +1,23 @@
- body {
-  margin: 0;
-  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Reset and base */
+html, body {
   height: 100%;
-  background-image: url('images/WebsiteBG.jpeg'); 
-  background-size: cover;     
-  background-repeat: no-repeat; 
-  background-position: center; 
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('images/WebsiteBG.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   background-blend-mode: darken;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  /* Removed duplicate margin, height */
   overflow-x: hidden;
 }
 
@@ -71,7 +82,7 @@
   padding: 5px 8px; /* slight padding for better touch */
 }
 
-/* Responsive tweaks remain */
+/* Responsive navbar */
 @media (max-width: 768px) {
   .nav-container {
     flex-wrap: wrap;
@@ -103,54 +114,68 @@
   .nav-links a {
     font-size: 14px;
   }
+    .slide-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
 }
 
+/* Main container */
 .container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
-      align-items: flex-start;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 1rem; /* reduce horizontal padding */
+  max-width: 1200px;
+  margin: auto;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
 
+/* Sidebar */
 .sidebar {
-      flex: 1 1 300px;
-      background: #e3efff;
-      padding: 1.5rem;
-      border-radius: 8px;
-    }
+  flex: 1 1 300px;
+  background: #e3efff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-sizing: border-box;
+  min-width: 250px;
+}
 
 .sidebar h2 {
-      margin-bottom: 0.5rem;
-      color: #1a2b4c;
-    }
+  margin-bottom: 0.5rem;
+  color: #1a2b4c;
+}
 
 .sidebar ul {
-      list-style: none;
-      margin-bottom: 1rem;
-    }
+  list-style: none;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
 
 .sidebar li {
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-    }
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
 
+/* Details list */
 .details-list {
   flex: 2 1 600px;
-  max-height: 500px; 
+  max-height: 50vh; /* changed to relative height */
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   min-width: 0;
-  scrollbar-width: thin;              
+  scrollbar-width: thin;
   scrollbar-color: #1a2b4c #e3efff;
-  padding-right: 3.5rem;   
+  padding-right: 3.5rem;
+  box-sizing: border-box;
 }
 
+/* Details panel */
 .details {
   flex: 2 1 600px;
   background: white;
@@ -160,19 +185,20 @@
   margin-bottom: 0;
   width: 100%;
   min-width: 0;
+  box-sizing: border-box;
 }
 
 .details h2 {
-      font-size: 1.5rem;
-      color: #1a2b4c;
-      margin-bottom: 1rem;
-    }
+  font-size: 1.5rem;
+  color: #1a2b4c;
+  margin-bottom: 1rem;
+}
 
 .details .price {
-      font-size: 1rem;
-      color: #888;
-      font-weight: normal;
-    }
+  font-size: 1rem;
+  color: #888;
+  font-weight: normal;
+}
 
 .details p {
   width: 100%;
@@ -183,23 +209,24 @@
 }
 
 .extras {
-      margin-top: 1rem;
-    }
+  margin-top: 1rem;
+}
 
 .view-photos {
-      display: block;
-      background: #1a2b4c;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      margin-bottom: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+  display: block;
+  background: #1a2b4c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
 
 .view-photos:hover {
-      background: #0e1b35;
-  }
+  background: #0e1b35;
+}
 
 .things-content {
   display: none;
@@ -216,6 +243,7 @@
   user-select: none;
 }
 
+/* Images */
 .feature-image {
   display: block;
   max-width: 300px;
@@ -227,6 +255,7 @@
   margin-right: auto;
   cursor: pointer;
   transition: box-shadow 0.2s, transform 0.2s;
+  box-sizing: border-box;
 }
 
 .feature-image:hover {
@@ -240,10 +269,12 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
   max-width: 100%;
-  max-height: 220px;   
-  overflow-y: auto;     
-  padding-right: 0.5rem; 
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  box-sizing: border-box;
 }
+
 .photo-viewer img {
   width: 100%;
   height: 80px;
@@ -253,36 +284,35 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   transition: transform 0.2s;
 }
+
 .photo-viewer img:hover {
   transform: scale(1.05);
 }
 
-footer {
-      text-align: center;
-      padding: 1rem;
-      color: white;
-      margin-top: 0.5rem;
-    }
-
 .slideshow {
   position: relative;
   width: 100%;
-  max-width: 340px; /* Increased to allow for buttons outside */
+  max-width: 340px;
   margin: 0 auto 1rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 40px; /* Add space for buttons */
-  box-sizing: content-box;
+  padding: 0 50px; /* more space for buttons */
+  box-sizing: border-box;
+  overflow: visible; /* allow buttons outside */
 }
+
 .slideshow img {
   width: 100%;
-  height: 180px;
+  height: auto; /* keep aspect ratio */
+  max-height: 180px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   display: block;
+  flex-shrink: 0;
 }
+
 .slide-btn {
   position: absolute;
   top: 50%;
@@ -298,6 +328,29 @@ footer {
   font-size: 1.2rem;
   z-index: 2;
   transition: background 0.2s, opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#prev-slide, #prev-slide-nz, #prev-slide-dt { left: -20px; }
-#next-slide, #next-slide-nz, #next-slide-dt { right: -20px; } 
+
+#prev-slide, #prev-slide-nz, #prev-slide-dt {
+  left: 5px;  /* closer to container edge but positive */
+}
+
+#next-slide, #next-slide-nz, #next-slide-dt {
+  right: 5px;
+}
+
+/* Page wrapper and footer */
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1e3a8a;
+  color: #ffffff;
+}
