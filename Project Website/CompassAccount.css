@@ -1,0 +1,153 @@
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('images/WebsiteBG.jpeg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; /* keeps it in place while scrolling */
+  overflow-x: hidden;
+  min-height: 100%;
+  font-size: clamp(14px, 1.2vw, 18px); /* scales font size between 14px and 18px depending on viewport width */
+  margin: 0; /* reset margin */
+  padding: 0 1rem; /* horizontal padding for small devices */
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.navbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: -20px;
+  height: auto; /* changed from fixed 100px */
+  margin-bottom: 2px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px; /* added some vertical padding */
+  box-sizing: border-box;
+  flex-wrap: wrap; /* allow wrapping on extreme zoom */
+  min-height: 80px; /* maintain some min height */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  gap: 10px;
+  overflow: visible;
+  flex-wrap: wrap; /* allow wrapping */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-right: 20px;
+  margin-top: 10px; /* added bottom margin for wrap spacing */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: flex-end;
+  min-width: 200px;
+  flex-wrap: wrap;
+  white-space: normal; /* allow breaking/wrapping */
+  overflow: hidden; /* hide scrollbar completely */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 5px 8px; /* slight padding for better touch */
+}
+
+/* Responsive tweaks remain */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    min-width: auto;
+  }
+  .logo {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-links {
+    justify-content: center;
+    gap: 12px;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  .nav-links a {
+    font-size: 14px;
+  }
+}
+
+.account-info {
+  max-width: 600px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.user-trips {
+  max-width: 600px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.trip-entry {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.delete-trip-button {
+  background-color: #dc2626;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.change-password-link {
+  color: #007BFF;
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+}
+
