@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <style>
 body {
     font-family: 'Arial', sans-serif;
-    background: url('images/CompassBG.jpeg') no-repeat center center fixed;
+    background: url('images/WebsiteBG.jpeg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
