@@ -68,12 +68,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $mail->isSMTP();
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'niloharryb07@gmail.com';
-                    $mail->Password = 'pdno dksx wxne uali';
+                    $mail->Username = 'youremail@gmail.com';
+                    $mail->Password = 'google app password';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port = 587;
 
-                    $mail->setFrom('niloharryb07@gmail.com', 'Your Website');
+                    $mail->setFrom('compasslogin@gmail.com', 'CompassMailer');
                     $mail->addAddress($email);
                     $mail->isHTML(true);
                     $mail->Subject = $subject;
