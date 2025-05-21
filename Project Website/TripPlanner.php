@@ -137,7 +137,7 @@ if (!isset($_SESSION['user'])) {
             <label><input type="checkbox" name="info[]" value="Political Info"> Political Info</label>
             <label><input type="checkbox" name="info[]" value="Health"> Health</label>
             <label><input type="checkbox" name="info[]" value="Gear"> Gear</label>
-            <label><input type="checkbox" name="info[]" value="Activity Specific"> Activity Specific</label>
+            <label><input type="checkbox" name="info[]" value="Specific Activity"> Specific Activity</label>
           </div>
         </div>
       </div>
@@ -184,3 +184,4 @@ if (!isset($_SESSION['user'])) {
   </script>
 </body>
 </html>
+
