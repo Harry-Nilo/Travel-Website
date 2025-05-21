@@ -8,16 +8,22 @@
   <title>Compass Travel - Trip Planner</title>
 </head>
 <body>
-  <header class="header">
-    <img src="images/compass_logo.gif" alt="Compass Logo" class="logo">
-    <nav class="nav">
-      <a href="CompassHome.html"><img src="images/Home.gif" alt="Home"></a>
-      <a href="TripPlanner.php"><img src="images/MenuTripPlanner.gif" alt="Trip Planner"></a>
-      <a href="#destinations"><img src="images/MenuDestinations.gif" alt="Destinations"></a>
-      <a href="#travel-logs"><img src="images/MenuTravelLogs.gif" alt="Travel Logs"></a>
-      <a href="#CompassAccount.html"><img src="images/Account.gif" alt="Account"></a>
-    </nav>
-  </header>
+
+  <!-- Replaced Header with Destinations-style Navbar -->
+  <div class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo"><img src="images/compass_logo.gif" alt="Logo"></a>
+      <ul class="nav-links">
+        <li><a href="CompassHome.html">Home</a></li>
+        <li><a href="TripPlanner.php">TripPlanner</a></li>
+        <li><a href="Destination.html">Destinations</a></li>
+        <li><a href="Travelog.html">Travel Logs</a></li>
+        <li><a href="CompassAccount.php">Account</a></li>
+        <li><a href="CompassLogin.php">Log Out</a></li>
+      </ul>
+      </ul>
+    </div>
+  </div>
 
   <section class="introduction">
     <h1>Adventure Planner</h1>
