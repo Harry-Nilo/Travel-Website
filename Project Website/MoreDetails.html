@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="MoreDetails.css">
   <title>More Details</title>
 </head>
 <body>
+  <div class="page-wrapper">
    <div class="navbar">
     <div class="nav-container">
       <a href="#" class="logo"><img src="images/compass_logo.gif" alt="Logo"></a>
@@ -75,10 +76,6 @@
         </section>
     </div>
 </main>
-
-<footer>
-  <p>&copy; 2025 Travel Compass. All rights reserved.</p>
-</footer>
 
 <div id="photo-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);justify-content:center;align-items:center;">
     <img id="modal-img" src="" alt="Full Photo" style="max-width:90vw;max-height:90vh;border-radius:10px;box-shadow:0 4px 24px rgba(0,0,0,0.5);">
@@ -253,5 +250,9 @@
       }
     });
 </script>
+</div>
+<footer class="footer">
+  @Compass Travel
+</footer>
 </body>
 </html>
