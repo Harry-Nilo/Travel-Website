@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 body {
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url('images/CompassBG.jpeg') no-repeat center center fixed;
+    background: url('images/WebsiteBG.jpeg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 40px 15px;
