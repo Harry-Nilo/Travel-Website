@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS user_auth;
-USE user_auth;
+CREATE DATABASE IF NOT EXISTS compass_site;
+USE compass_site;
 
 -- Users Table
 CREATE TABLE IF NOT EXISTS users (
