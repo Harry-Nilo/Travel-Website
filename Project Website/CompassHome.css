@@ -60,7 +60,7 @@
   min-width: 200px;
   flex-wrap: wrap;
   white-space: normal; /* allow breaking/wrapping */
-   overflow: visible; /* hide scrollbar completely */
+  overflow: visible; /* hide scrollbar completely */
 }
 
 .nav-links a {
@@ -76,6 +76,7 @@
 .nav-links a:hover {
   border-bottom: 2px solid #fff; /* underline appears on hover */
 }
+
 
 /* Responsive tweaks remain */
 @media (max-width: 768px) {
@@ -217,10 +218,18 @@
 
 .footer {
   text-align: center;
-  padding: 1rem;
-  background-color: #1e3a8a;
+  padding: 0.5rem;
+  background-color: #333;
   color: #ffffff;
+  line-height: 1.5; 
+  font-weight: 500; 
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.footer p {
+  margin: 0.2rem 0; /* Reduce top and bottom margin of each line */
+}
+
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
