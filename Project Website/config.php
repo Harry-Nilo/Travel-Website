@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$db = 'user_auth';
+$db = 'compass_site';
 $user = 'root';
 $pass = ''; 
 
