@@ -9,7 +9,7 @@ body {
   min-height: 100%;
   font-size: clamp(14px, 1.2vw, 18px);
   margin: 0;
-  padding: 0 1rem;
+  padding: 0;
   box-sizing: border-box;
   line-height: 1.5;
 }
@@ -127,15 +127,13 @@ html, body {
 
 .account-info,
 .user-trips {
-  max-width: 600px;
-  width: 100%; /* prevent going edge-to-edge at extreme zoom */
+  width: min(600px, 90%);
   margin: 50px auto;
   background: rgba(255, 255, 255, 0.85);
   padding: 20px;
   border-radius: 10px;
   box-sizing: border-box;
   word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 
@@ -211,8 +209,9 @@ html, body {
 @media (max-width: 600px) {
   .account-info,
   .user-trips {
+    width: 95%;
     padding: 1rem;
-    margin: 1rem 0.5rem;
+    margin: 1rem auto;
   }
 
   .trip-entry {
