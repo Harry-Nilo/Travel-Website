@@ -155,11 +155,6 @@ if (!isset($_SESSION['user'])) {
     </section>
   </form>
   <!-- End of Form -->
-
-  <footer class="footer">
-    @Compass Travel
-  </footer>
-
   <!-- JavaScript for AJAX submission -->
   <script>
     document.getElementById('tripForm').addEventListener('submit', function (e) {
@@ -181,6 +176,9 @@ if (!isset($_SESSION['user'])) {
       });
     });
   </script>
+    <footer class="footer">
+    @Compass Travel
+  </footer>
 </body>
 </html>
 
