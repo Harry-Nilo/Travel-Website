@@ -7,7 +7,7 @@
 <body>
     <div class="wrapper">
         <div class="container">
-            <form action="CompassRegisterProcess.php" method="POST" onsubmit="return validatePasswords()">
+            <form id="registerForm" method="POST">
                 <h2>Register for Compass Travel</h2>
                 <input type="text" name="username" placeholder="Username" required>
                 <input type="email" name="email" placeholder="Email" required>
@@ -31,20 +31,40 @@
     </div>
 
     <script>
-        function validatePasswords() {
-            const password = document.getElementById('password').value;
-            const confirm = document.getElementById('confirm_password').value;
-            if (password !== confirm) {
-                alert("Passwords do not match.");
-                return false;
-            }
-            return true;
-        }
-
         function togglePassword(fieldId) {
             const field = document.getElementById(fieldId);
             field.type = field.type === "password" ? "text" : "password";
         }
+
+        document.getElementById("registerForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const password = document.getElementById('password').value;
+            const confirm = document.getElementById('confirm_password').value;
+
+            if (password !== confirm) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            const formData = new FormData(this);
+
+            fetch('CompassRegisterProcess.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                if (data.status === 'success') {
+                    window.location.href = 'CompassLogin.php';
+                }
+            })
+            .catch(error => {
+                alert('An error occurred. Please try again.');
+                console.error(error);
+            });
+        });
     </script>
 </body>
 </html>
