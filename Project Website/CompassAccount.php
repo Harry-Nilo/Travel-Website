@@ -35,7 +35,7 @@ try {
   <title>Compass Travel - Account</title>
 </head>
 <body>
-
+<div class="main-content">
 <div class="navbar">
   <div class="nav-container">
     <a href="#" class="logo"><img src="images/compass_logo.gif" alt="Logo" /></a>
@@ -99,7 +99,13 @@ try {
   ?>
   </div>
 </div>
+</div>
 
+  <footer class="footer">
+    <p>Contact Us:</p>
+    <p>travel.compass@gmail.com</p>
+    <p>+639123456789</p>
+  </footer>
 
 <script>
 function deleteTrip(tripId) {
@@ -143,7 +149,5 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-
 </body>
 </html>
