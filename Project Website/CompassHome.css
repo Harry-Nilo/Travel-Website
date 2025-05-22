@@ -60,7 +60,7 @@
   min-width: 200px;
   flex-wrap: wrap;
   white-space: normal; /* allow breaking/wrapping */
-  overflow: hidden; /* hide scrollbar completely */
+   overflow: visible; /* hide scrollbar completely */
 }
 
 .nav-links a {
@@ -68,7 +68,13 @@
   color: #fff;
   font-weight: 500;
   white-space: nowrap;
-  padding: 5px 8px; /* slight padding for better touch */
+  padding: 5px 8px;
+  transition: transform 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent; /* initial no underline */
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid #fff; /* underline appears on hover */
 }
 
 /* Responsive tweaks remain */
