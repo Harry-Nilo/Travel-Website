@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_id'])) {
 $host = "localhost";
 $user = "root";
 $password = "";
-$dbname = "user_auth";
+$dbname = "compass_site";
 
 // Connect to MySQL
 $conn = new mysqli($host, $user, $password, $dbname);
