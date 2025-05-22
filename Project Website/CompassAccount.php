@@ -62,15 +62,17 @@ try {
 </div>
 
 <div class="user-trips">
-  <h2>Your Planned Trips</h2>
+  <h2 class="trips-header">
+  <span>Your Planned Trips</span>
+  <button id="toggleTripsBtn" aria-expanded="true" aria-controls="tripsContent" class="toggle-button">-</button>
+</h2>
+  <div id="tripsContent">
   <?php
   try {
       $stmt = $pdo->prepare("SELECT id FROM users WHERE username = ?");
       $stmt->execute([$username]);
       $userRow = $stmt->fetch(PDO::FETCH_ASSOC);
       $userId = $userRow['id'];
-
-      // ✅ Query updated to use plans table inside user_auth (no more trip_planner_db.)
       $stmt = $pdo->prepare("SELECT id, country, city, activities, info_types, submitted_at FROM plans WHERE user_id = ? ORDER BY submitted_at DESC");
       $stmt->execute([$userId]);
       $trips = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -95,7 +97,9 @@ try {
       echo "<p class='error'>Error retrieving trips: " . htmlspecialchars($e->getMessage()) . "</p>";
   }
   ?>
+  </div>
 </div>
+
 
 <script>
 function deleteTrip(tripId) {
@@ -121,7 +125,25 @@ function deleteTrip(tripId) {
     alert('An error occurred while deleting the trip.');
   });
 }
+
+// Attach the toggle button event listener right away on page load
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('toggleTripsBtn').addEventListener('click', function() {
+    const tripsContent = document.getElementById('tripsContent');
+    const btn = this;
+    if (tripsContent.style.display === 'none') {
+      tripsContent.style.display = 'block';
+      btn.textContent = '-';
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      tripsContent.style.display = 'none';
+      btn.textContent = '+';
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
 </script>
+
 
 </body>
 </html>
