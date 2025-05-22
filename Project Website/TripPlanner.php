@@ -176,9 +176,10 @@ if (!isset($_SESSION['user'])) {
       });
     });
   </script>
-    <footer class="footer">
-    @Compass Travel
+      <footer class="footer">
+    <p>Contact Us:</p>
+    <p>travel.compass@gmail.com</p>
+    <p>+639123456789</p>
   </footer>
 </body>
 </html>
-
