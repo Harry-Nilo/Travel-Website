@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_id'])) {
 $host = "localhost";
 $user = "root";
 $password = "";
-$dbname = "trip_planner_db";
+$dbname = "user_auth";
 
 // Connect to MySQL
 $conn = new mysqli($host, $user, $password, $dbname);
@@ -42,4 +42,5 @@ if ($stmt->execute()) {
 $stmt->close();
 $conn->close();
 ?>
+
 
