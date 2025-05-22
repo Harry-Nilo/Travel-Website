@@ -4,29 +4,40 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed; /* keeps it in place while scrolling */
+  background-attachment: fixed;
   overflow-x: hidden;
   min-height: 100%;
-  font-size: clamp(14px, 1.2vw, 18px); /* scales font size between 14px and 18px depending on viewport width */
-  margin: 0; /* reset margin */
-  padding: 0 1rem; /* horizontal padding for small devices */
+  font-size: clamp(14px, 1.2vw, 18px);
+  margin: 0;
+  padding: 0 1rem;
   box-sizing: border-box;
   line-height: 1.5;
+}
+
+/* Fix horizontal overflow at all zoom levels */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin: -20px;
-  height: auto; /* changed from fixed 100px */
+  height: auto;
   margin-bottom: 2px;
   background-color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px; /* added some vertical padding */
+  padding: 10px 20px;
   box-sizing: border-box;
-  flex-wrap: wrap; /* allow wrapping on extreme zoom */
-  min-height: 80px; /* maintain some min height */
+  flex-wrap: wrap;
+  min-height: 80px;
 }
 
 .nav-container {
@@ -39,7 +50,7 @@ body {
   margin-top: 15px;
   gap: 10px;
   overflow: visible;
-  flex-wrap: wrap; /* allow wrapping */
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -50,7 +61,7 @@ body {
   flex-shrink: 0;
   white-space: nowrap;
   margin-right: 20px;
-  margin-top: 10px; /* added bottom margin for wrap spacing */
+  margin-top: 10px;
 }
 
 .nav-links {
@@ -63,8 +74,8 @@ body {
   justify-content: flex-end;
   min-width: 200px;
   flex-wrap: wrap;
-  white-space: normal; /* allow breaking/wrapping */
-  overflow: visible; /* hide scrollbar completely */
+  white-space: normal;
+  overflow: visible;
 }
 
 .nav-links a {
@@ -74,14 +85,13 @@ body {
   white-space: nowrap;
   padding: 5px 8px;
   transition: transform 0.3s ease, border-bottom 0.3s ease;
-  border-bottom: 2px solid transparent; /* initial no underline */
+  border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover {
-  border-bottom: 2px solid #fff; /* underline appears on hover */
+  border-bottom: 2px solid #fff;
 }
 
-/* Responsive tweaks remain */
 @media (max-width: 768px) {
   .nav-container {
     flex-wrap: wrap;
@@ -115,21 +125,19 @@ body {
   }
 }
 
-.account-info {
-  max-width: 600px;
-  margin: 50px auto;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-}
-
+.account-info,
 .user-trips {
   max-width: 600px;
+  width: 100%; /* prevent going edge-to-edge at extreme zoom */
   margin: 50px auto;
   background: rgba(255, 255, 255, 0.85);
   padding: 20px;
   border-radius: 10px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
+
 
 .trip-entry {
   margin-bottom: 20px;
@@ -161,11 +169,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem; /* optional spacing */
+  margin-bottom: 1rem;
 }
 
 .toggle-button {
-  background-color: orange; /* bright red */
+  background-color: orange;
   color: white;
   font-weight: bold;
   border: none;
@@ -179,4 +187,41 @@ body {
 
 .toggle-button:hover {
   background-color: rgb(245, 161, 5); 
+}
+
+.main-content {
+  flex: 1;
+}
+
+.footer {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #333;
+  color: #ffffff;
+  line-height: 1.5;
+  font-weight: 500;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0.2rem 0;
+}
+
+@media (max-width: 600px) {
+  .account-info,
+  .user-trips {
+    padding: 1rem;
+    margin: 1rem 0.5rem;
+  }
+
+  .trip-entry {
+    padding: 0.8rem;
+  }
+
+  .trips-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }
