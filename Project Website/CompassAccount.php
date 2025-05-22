@@ -50,7 +50,6 @@ try {
   </div>
 </div>
 
-<!-- Replace the two divs' style attributes with class names -->
 <div class="account-info">
   <?php if ($user): ?>
     <h2>Account Details</h2>
@@ -66,12 +65,13 @@ try {
   <h2>Your Planned Trips</h2>
   <?php
   try {
-      $stmt = $pdo->prepare("SELECT id FROM user_auth.users WHERE username = ?");
+      $stmt = $pdo->prepare("SELECT id FROM users WHERE username = ?");
       $stmt->execute([$username]);
       $userRow = $stmt->fetch(PDO::FETCH_ASSOC);
       $userId = $userRow['id'];
 
-      $stmt = $pdo->prepare("SELECT id, country, city, activities, info_types, submitted_at FROM trip_planner_db.plans WHERE user_id = ? ORDER BY submitted_at DESC");
+      // ✅ Query updated to use plans table inside user_auth (no more trip_planner_db.)
+      $stmt = $pdo->prepare("SELECT id, country, city, activities, info_types, submitted_at FROM plans WHERE user_id = ? ORDER BY submitted_at DESC");
       $stmt->execute([$userId]);
       $trips = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
