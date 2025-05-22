@@ -64,7 +64,7 @@ body {
   min-width: 200px;
   flex-wrap: wrap;
   white-space: normal; /* allow breaking/wrapping */
-   overflow: visible; /* hide scrollbar completely */
+  overflow: visible; /* hide scrollbar completely */
 }
 
 .nav-links a {
@@ -157,3 +157,26 @@ body {
   color: red;
 }
 
+.trips-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem; /* optional spacing */
+}
+
+.toggle-button {
+  background-color: orange; /* bright red */
+  color: white;
+  font-weight: bold;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-button:hover {
+  background-color: rgb(245, 161, 5); 
+}
