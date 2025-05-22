@@ -29,7 +29,6 @@ if (!isset($_SESSION['user'])) {
         <li><a href="CompassAccount.php">Account</a></li>
         <li><a href="CompassLogin.php">Log Out</a></li>
       </ul>
-      </ul>
     </div>
   </div>
 
