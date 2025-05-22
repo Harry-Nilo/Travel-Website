@@ -21,5 +21,10 @@
         </form>
     </div>
     <script src="CompassLogin.js"></script>
+     <?php if (isset($_GET['error'])): ?>
+<script>
+    alert("<?= htmlspecialchars($_GET['error']) ?>");
+</script>
+<?php endif; ?>
 </body>
 </html>
