@@ -117,7 +117,16 @@ body {
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   color: #000000;
-  max-width: 1000px;       
+  max-width: 1000px;
+  width: 100%;       
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
   box-sizing: border-box;
 }
 
