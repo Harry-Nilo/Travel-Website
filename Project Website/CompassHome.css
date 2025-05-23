@@ -13,16 +13,16 @@
 .navbar {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin: -20px;
-  height: auto; /* changed from fixed 100px */
+  height: auto; 
   margin-bottom: 2px;
   background-color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px; /* added some vertical padding */
+  padding: 10px 20px; 
   box-sizing: border-box;
-  flex-wrap: wrap; /* allow wrapping on extreme zoom */
-  min-height: 80px; /* maintain some min height */
+  flex-wrap: wrap; 
+  min-height: 80px; 
 }
 
 .nav-container {
@@ -35,7 +35,7 @@
   margin-top: 15px;
   gap: 10px;
   overflow: visible;
-  flex-wrap: wrap; /* allow wrapping */
+  flex-wrap: wrap; 
 }
 
 .logo {
@@ -46,7 +46,7 @@
   flex-shrink: 0;
   white-space: nowrap;
   margin-right: 20px;
-  margin-top: 10px; /* added bottom margin for wrap spacing */
+  margin-top: 10px; 
 }
 
 .nav-links {
@@ -59,8 +59,8 @@
   justify-content: flex-end;
   min-width: 200px;
   flex-wrap: wrap;
-  white-space: normal; /* allow breaking/wrapping */
-  overflow: visible; /* hide scrollbar completely */
+  white-space: normal; 
+  overflow: visible; 
 }
 
 .nav-links a {
@@ -70,15 +70,14 @@
   white-space: nowrap;
   padding: 5px 8px;
   transition: transform 0.3s ease, border-bottom 0.3s ease;
-  border-bottom: 2px solid transparent; /* initial no underline */
+  border-bottom: 2px solid transparent; 
 }
 
 .nav-links a:hover {
-  border-bottom: 2px solid #fff; /* underline appears on hover */
+  border-bottom: 2px solid #fff; 
 }
 
 
-/* Responsive tweaks remain */
 @media (max-width: 768px) {
   .nav-container {
     flex-wrap: wrap;
@@ -112,7 +111,6 @@
   }
 }
 
-/* PAGE CONTENT BELOW */
 .introduction {
   background: rgba(255, 255, 255, 0.85);
   padding: 1rem;
@@ -228,11 +226,10 @@
 }
 
 .footer p {
-  margin: 0.2rem 0; /* Reduce top and bottom margin of each line */
+  margin: 0.2rem 0; 
 }
 
 
-/* Responsive tweaks */
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
@@ -248,7 +245,6 @@
     margin: 0.5rem;
   }
 
-  /* Keep nav links horizontal but allow wrapping and smaller gaps */
   .nav-links {
     gap: 15px;
     justify-content: center;
@@ -294,4 +290,3 @@
     font-size: 1.2rem;
   }
 }
-
