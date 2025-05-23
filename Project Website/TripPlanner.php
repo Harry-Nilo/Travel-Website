@@ -17,7 +17,6 @@ if (!isset($_SESSION['user'])) {
 </head>
 <body>
 
-  <!-- Replaced Header with Destinations-style Navbar -->
   <div class="navbar">
     <div class="nav-container">
       <a href="#" class="logo"><img src="images/compass_logo.gif" alt="Logo"></a>
@@ -40,7 +39,6 @@ if (!isset($_SESSION['user'])) {
     <div id="chartdiv" style="width: 100%; height: 500px; border-radius: 8px;"></div>
   </section>
 
-  <!-- amCharts v5 CDN -->
   <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
   <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
   <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
@@ -153,11 +151,10 @@ if (!isset($_SESSION['user'])) {
       </div>
     </section>
   </form>
-  <!-- End of Form -->
-  <!-- JavaScript for AJAX submission -->
+
   <script>
     document.getElementById('tripForm').addEventListener('submit', function (e) {
-      e.preventDefault(); // Stop default form submission
+      e.preventDefault(); 
 
       const formData = new FormData(this);
 
