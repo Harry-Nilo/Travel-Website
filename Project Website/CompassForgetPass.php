@@ -1,5 +1,5 @@
 <?php
-session_start();  // Start session at the top
+session_start();  
 
 require 'Database.php';
 require 'PHPMailer/src/Exception.php';
@@ -12,7 +12,7 @@ use PHPMailer\PHPMailer\Exception;
 $email = trim($_POST['email'] ?? '');
 $errors = [];
 
-// Get success message from session (if any) and clear it
+
 $success = $_SESSION['success'] ?? '';
 unset($_SESSION['success']);
 
@@ -25,18 +25,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             $pdo = getDatabaseConnection();
 
-            // Check if the email exists in the database
+           
             $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
             $stmt->execute(['email' => $email]);
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user) {
-                // Generate a secure reset code and expiry time
-                $resetCode = strtoupper(substr(bin2hex(random_bytes(4)), 0, 8)); // 8-character code
+                
+                $resetCode = strtoupper(substr(bin2hex(random_bytes(4)), 0, 8)); 
                 date_default_timezone_set('Asia/Manila');
                 $expiry = date('Y-m-d H:i:s', strtotime('+1 hour'));
 
-                // Update the reset token and expiry in DB
+                
                 $stmt = $pdo->prepare("UPDATE users SET reset_token = :token, reset_token_expiry = :expiry WHERE email = :email");
                 $stmt->execute([
                     'token' => $resetCode,
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'email' => $email
                 ]);
 
-                // Prepare email content
+               
                 $subject = "Your Password Reset Code";
                 $message = "
                 <html>
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </html>
                 ";
 
-                // Send email using PHPMailer
+                
                 $mail = new PHPMailer(true);
 
                 try {
@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     $mail->send();
 
-                    // Set success message and redirect to avoid resubmission
+                    
                     $_SESSION['success'] = "A password reset code has been sent to your email.";
                     header("Location: " . $_SERVER['PHP_SELF']);
                     exit();
@@ -122,7 +122,7 @@ body {
     background: rgba(255, 255, 255, 0.85);
     padding: 30px;
     border-radius: 10px;
-    border: 2px solid #333; /* Dark border */
+    border: 2px solid #333; 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
