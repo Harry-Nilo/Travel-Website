@@ -73,7 +73,7 @@ body {
 }
 
 .reset-container {
-    background-color: rgba(214, 240, 244, 0.7);
+    background: rgba(255, 255, 255, 0.85);
     padding: 30px;
     border-radius: 10px;
     border: 2px solid #333;
@@ -85,7 +85,7 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: black;
 }
 
 input {
@@ -100,7 +100,7 @@ input {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #007BFF;
+    background-color: #1e3a8a;
     border: none;
     border-radius: 6px;
     color: #fff;
@@ -184,3 +184,4 @@ button:hover {
 </div>
 </body>
 </html>
+
