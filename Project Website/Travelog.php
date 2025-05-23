@@ -108,7 +108,7 @@ $result = $stmt->get_result();
 
 <div class="photo-grid">
   <div class="photo-item">
-    <img src="images/kayaking.jpg" alt="Photo 1">
+    <img src="images/kayaking4.jpg" alt="Photo 1">
     <div class="caption"><h3>Conquering the rapids on the Rutan Islands</h3></br>Definitely our craziest journey ever! A beautiful collage of nature. 
       Rapids reaching nearly 50 mph, more than a dozen waterfalls (various sizes), and some killer 
       rocks gave us the biggest rush. Nothing beats the feeling of complete loss of control! 
