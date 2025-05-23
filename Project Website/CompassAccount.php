@@ -40,12 +40,12 @@ try {
   <div class="nav-container">
     <a href="#" class="logo"><img src="images/compass_logo.gif" alt="Logo" /></a>
     <ul class="nav-links">
-      <li><a href="CompassHome.html">Home</a></li>
-      <li><a href="TripPlanner.php">TripPlanner</a></li>
-      <li><a href="Destination.html">Destinations</a></li>
-      <li><a href="Travelog.html">Travel Logs</a></li>
-      <li><a href="CompassAccount.php">Account</a></li>
-      <li><a href="CompassLogin.php">Log Out</a></li>
+        <li><a href="CompassHome.html">Home</a></li>
+        <li><a href="TripPlanner.php">TripPlanner</a></li>
+        <li><a href="Destination.php">Destinations</a></li>
+        <li><a href="Travelog.php">Travel Logs</a></li>
+        <li><a href="CompassAccount.php">Account</a></li>
+        <li><a href="CompassLogin.php">Log Out</a></li>
     </ul>
   </div>
 </div>
