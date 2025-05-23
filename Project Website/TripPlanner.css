@@ -13,16 +13,16 @@ body {
 .navbar {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin: -20px;
-  height: auto; /* changed from fixed 100px */
+  height: auto; 
   margin-bottom: 2px;
   background-color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px; /* added some vertical padding */
+  padding: 10px 20px; 
   box-sizing: border-box;
-  flex-wrap: wrap; /* allow wrapping on extreme zoom */
-  min-height: 80px; /* maintain some min height */
+  flex-wrap: wrap; 
+  min-height: 80px; 
 }
 
 .nav-container {
@@ -35,7 +35,7 @@ body {
   margin-top: 15px;
   gap: 10px;
   overflow: visible;
-  flex-wrap: wrap; /* allow wrapping */
+  flex-wrap: wrap; 
 }
 
 .logo {
@@ -46,7 +46,7 @@ body {
   flex-shrink: 0;
   white-space: nowrap;
   margin-right: 20px;
-  margin-top: 10px; /* added bottom margin for wrap spacing */
+  margin-top: 10px; 
 }
 
 .nav-links {
@@ -59,8 +59,8 @@ body {
   justify-content: flex-end;
   min-width: 200px;
   flex-wrap: wrap;
-  white-space: normal; /* allow breaking/wrapping */
-  overflow: visible; /* hide scrollbar completely */
+  white-space: normal; 
+  overflow: visible; 
 }
 
 .nav-links a {
@@ -70,14 +70,13 @@ body {
   white-space: nowrap;
   padding: 5px 8px;
   transition: transform 0.3s ease, border-bottom 0.3s ease;
-  border-bottom: 2px solid transparent; /* initial no underline */
+  border-bottom: 2px solid transparent; 
 }
 
 .nav-links a:hover {
-  border-bottom: 2px solid #fff; /* underline appears on hover */
+  border-bottom: 2px solid #fff; 
 }
 
-/* Responsive tweaks remain */
 @media (max-width: 768px) {
   .nav-container {
     flex-wrap: wrap;
@@ -113,12 +112,12 @@ body {
 
 .introduction {
   background: rgba(255, 255, 255, 0.85);
-  padding: 1rem 3vw;        /* Slightly reduced horizontal padding for consistency */
-  margin: 1rem auto;        /* Center horizontally and give vertical spacing */
+  padding: 1rem 3vw;        
+  margin: 1rem auto;        
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   color: #000000;
-  max-width: 1000px;         /* Limit the width like other sections */
+  max-width: 1000px;       
   box-sizing: border-box;
 }
 
@@ -135,10 +134,9 @@ body {
   text-align: center;
 }
 
-/* Map container responsiveness */
 #chartdiv {
   width: 100%;
-  height: 50vh; /* relative height */
+  height: 50vh; 
   max-height: 500px;
   border-radius: 8px;
 }
@@ -155,7 +153,7 @@ body {
 .information-section,
 .submit-section {
   background: rgba(255, 255, 255, 0.85);
-  padding: 1rem; /* horizontal padding relative */
+  padding: 1rem; 
   margin: 2rem auto;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -216,7 +214,7 @@ body {
   .activity-section,
   .information-section,
   .submit-section {
-    max-width: 500px; /* Larger max-width for bigger screens */
+    max-width: 500px; 
   }
 }
 
@@ -289,14 +287,14 @@ body {
 
 .checkbox-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);  /* Creates 3 columns */
-  gap: 1rem;  /* Space between items */
+  grid-template-columns: repeat(3, 1fr);  
+  gap: 1rem;  
   margin-top: 1rem;
 }
 
 .checkbox-section input[type="checkbox"] {
   width: 12px; 
-  height: 12px;   /* Space between checkbox and label */
+  height: 12px;  
   margin-top: 6px;
 }
 
@@ -317,7 +315,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Center inputs in destination-section */
 .destination-section .input-section {
   align-items: center;
 }
@@ -325,8 +322,8 @@ body {
 .submit-button-container {
   margin-top: 1rem;
   display: flex;
-  justify-content: center;  /* Centers the button horizontally */
-  align-items: center;      /* Aligns the button vertically if necessary */
+  justify-content: center;  
+  align-items: center;   
 }
 
 .submit-button {
@@ -358,5 +355,5 @@ body {
 }
 
 .footer p {
-  margin: 0.2rem 0; /* Reduce top and bottom margin of each line */
+  margin: 0.2rem 0; 
 }
