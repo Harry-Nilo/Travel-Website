@@ -371,7 +371,6 @@
   }
 }
 
-/* Footer style */
 .footer {
   text-align: center;
   padding: 0.5rem;
@@ -383,7 +382,6 @@
   margin-top: auto;
 }
 
-/* Reduce spacing between lines */
 .footer p {
   margin: 0.2rem 0;
 }
