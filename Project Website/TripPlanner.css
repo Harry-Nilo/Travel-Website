@@ -112,7 +112,7 @@ body {
 }
 
 .introduction {
-  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0.85);
   padding: 1rem 3vw;        /* Slightly reduced horizontal padding for consistency */
   margin: 1rem auto;        /* Center horizontally and give vertical spacing */
   border-radius: 8px;
@@ -124,7 +124,7 @@ body {
 
 .introduction h1 {
   font-size: 1.8rem;
-  color: maroon;
+  color: #1e3a8a;
   margin-top: 0;
   text-align: center;
 }
@@ -154,8 +154,8 @@ body {
 .activity-section,
 .information-section,
 .submit-section {
-  background-color: #ffffff;
-  padding: 1rem 3vw; /* horizontal padding relative */
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1rem; /* horizontal padding relative */
   margin: 2rem auto;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -267,7 +267,7 @@ body {
 
 .destination-content h2 {
   margin-top: 0;
-  color: maroon;
+  color: #1e3a8a;
   font-size: 1.5rem;
 }
 
