@@ -24,7 +24,7 @@ body {
 
 
 .container {
-    background-color: rgba(214, 240, 244, 0.7);
+    background: rgba(255, 255, 255, 0.85);
     padding: 30px 20px;
     border-radius: 10px;
     border: 2px solid #333;
@@ -39,7 +39,7 @@ h2 {
     margin-bottom: 20px;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #002D72;
+    color: #1e3a8a;
 }
 
 /* Input field styling */
@@ -55,7 +55,7 @@ input[type="text"], input[type="password"], input[type="email"] {
 }
 
 input:focus {
-    border-color: #002D72;
+    border-color: #1e3a8a;
     outline: none;
 }
 
@@ -64,7 +64,7 @@ button[type="submit"] {
     margin-bottom: 20px;
     width: 100%;
     padding: 12px;
-    background-color: #002D72;
+    background-color: #1e3a8a;
     border: none;
     border-radius: 5px;
     color: white;
@@ -81,7 +81,7 @@ button[type="submit"]:hover {
 /* Links */
 a {
     text-decoration: none;
-    color: #002D72;
+    color: #1e3a8a;
     font-weight: bold;
 }
 
@@ -93,7 +93,7 @@ a:hover {
 p {
     text-align: center;
     font-size: 0.9rem;
-    color: #666;
+    color: black;
     margin-bottom: 10px;
 }
 
@@ -119,7 +119,7 @@ p {
     background: none;
     border: none;
     font-weight: bold;
-    color: #002D72;
+    color: #1e3a8a;
     cursor: pointer;
     font-size: 0.9rem;
 }
@@ -146,4 +146,5 @@ p {
         font-size: 0.85rem;
     }
 }
+
 
