@@ -132,7 +132,6 @@ function deleteTrip(tripId) {
   });
 }
 
-// Attach the toggle button event listener right away on page load
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('toggleTripsBtn').addEventListener('click', function() {
     const tripsContent = document.getElementById('tripsContent');
