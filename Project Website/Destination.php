@@ -11,15 +11,14 @@
 
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo"><img src="./images/compass_logo.gif" alt="Logo"></a>
+      <a href="#" class="logo"><img src="images/compass_logo.gif" alt="Logo"></a>
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
+        <li><a href="CompassHome.html">Home</a></li>
         <li><a href="TripPlanner.php">TripPlanner</a></li>
-        <li><a href="#">Destinations</a></li>
+        <li><a href="Destination.php">Destinations</a></li>
         <li><a href="Travelog.php">Travel Logs</a></li>
         <li><a href="CompassAccount.php">Account</a></li>
         <li><a href="CompassLogin.php">Log Out</a></li>
-
       </ul>
     </div>
   </nav>
@@ -48,38 +47,38 @@
 
   <div class="grid-container">
     <div class="box hover-box" data-title="California Surfing Safari" data-description="Explore the beaches of California." data-category="surf">
-      <img src="./images/surfing3.jpg" alt="California Surfing Safari">
+      <img src="images/surfing3.jpg" alt="California Surfing Safari">
       <div class="image-details">
         <h3>California Surfing Safari</h3>
       </div>
       <div class="hover-detail">
         <p><h3>Be ready to go on a moment's notice. We will call you when the surf is pumping and fly you out for five mornings of hurricane 
           inspired summertime southern swells</h3></p> <h2>$960</br>includes lodging, food and airfare.</h2>
-          <button><a href="/Travelog.html">More Details</a></button>
+          <button><a href="Travelog.php">More Details</a></button>
       </div>
     </div>
 
     <div class="box hover-box" data-title="Bike New Zealand" data-description="Cycle through beautiful New Zealand." data-category="bike">
-      <img src="./images/biking22.jpg" alt="Bike New Zealand">
+      <img src="images/biking22.jpg" alt="Bike New Zealand">
       <div class="image-details">
         <h3>Bike New Zealand</h3>
       </div>
       <div class="hover-detail">
         <p><h3>Beautiful scenery combined with steep inclines and fast roads allowed for some great cycling. Don't forget the helmet!!</h3></p> 
         <h2>$1490</br>includes lodging, food and airfare.</h2>
-        <button><a href="/Travelog.html">More Details</a></button>
+        <button><a href="Travelog.php">More Details</a></button>
       </div>
     </div>
 
     <div class="box hover-box" data-title="Devil's Tower Rock Climb" data-description="Climb the famous Devil's Tower." data-category="climb">
-      <img src="./images/climbing.jpg" alt="Devil's Tower Rock Climb">
+      <img src="images/climbing.jpg" alt="Devil's Tower Rock Climb">
       <div class="image-details">
         <h3>Devil's Tower Rock Climb</h3>
       </div>
       <div class="hover-detail">
         <p><h3>In this three day trip you'll scale the majestic cliffs of beautiful Devil's Tower Wyoming.</h3></p>
         <h2>$1490</br>includes lodging, food and airfare.</h2>
-        <button><a href="/Travelog.html">More Details</a></button>
+        <button><a href="Travelog.php">More Details</a></button>
       </div>
     </div>
   </div>
