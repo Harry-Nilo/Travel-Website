@@ -84,7 +84,6 @@ if (!isset($_SESSION['user'])) {
     });
   </script>
 
-  <!-- Start of Form -->
   <form id="tripForm">
     <section class="destination-section">
       <div class="destination-row">
@@ -146,7 +145,7 @@ if (!isset($_SESSION['user'])) {
       <div class="destination-row">
         <img src="images/No4.gif" alt="Number 4" class="number-image">
         <div class="destination-content">
-          <h2>Submit >></h2>
+          <h2>Finished? Save your trip!</h2>
           <div class="submit-button-container">
             <button type="submit" class="submit-button">Submit</button>
           </div>
