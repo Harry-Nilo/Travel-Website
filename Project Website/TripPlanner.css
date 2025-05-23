@@ -113,22 +113,26 @@ body {
 
 .introduction {
   background-color: #ffffff;
-  padding: 1rem 5vw; /* horizontal padding relative */
-  margin: 1rem;
+  padding: 1rem 3vw;        /* Slightly reduced horizontal padding for consistency */
+  margin: 1rem auto;        /* Center horizontally and give vertical spacing */
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   color: #000000;
+  max-width: 1000px;         /* Limit the width like other sections */
+  box-sizing: border-box;
 }
 
 .introduction h1 {
   font-size: 1.8rem;
   color: maroon;
   margin-top: 0;
+  text-align: center;
 }
 
 .introduction p {
   font-size: 1rem;
   margin-top: 0.5rem;
+  text-align: center;
 }
 
 /* Map container responsiveness */
@@ -151,10 +155,21 @@ body {
 .information-section,
 .submit-section {
   background-color: #ffffff;
-  padding: 1rem 5vw; /* horizontal padding relative */
-  margin: 1rem;
+  padding: 1rem 3vw; /* horizontal padding relative */
+  margin: 2rem auto;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.destination-section h2,
+.destination-section p,
+.activity-section h2,
+.activity-section p,
+.information-section h2,
+.information-section p,
+.submit-section h2{
+  text-align: center;
 }
 
 .destination-row {
@@ -208,12 +223,32 @@ body {
   }
 }
 
-.input-section,
-.checkbox-section {
+.input-section{  
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 1rem;
+}
+
+.checkbox-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* Creates 3 columns */
+  gap: 1rem;  /* Space between items */
+  margin-top: 1rem;
+}
+
+.checkbox-section label {
+  font-size: 1rem;
+  color: #1e3a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-section input[type="checkbox"] {
+  width: 12px; 
+  height: 12px;   /* Space between checkbox and label */
+  margin-top: 6px;
 }
 
 .input-section label,
@@ -233,13 +268,9 @@ body {
   box-sizing: border-box;
 }
 
-.checkbox-section input {
-  padding: 0.5rem;
-  border: 1px solid #1e3a8a;
-  border-radius: 4px;
-  width: 1%;
-  max-width: 300px;
-  box-sizing: border-box;
+/* Center inputs in destination-section */
+.destination-section .input-section {
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -251,6 +282,9 @@ body {
 
 .submit-button-container {
   margin-top: 1rem;
+  display: flex;
+  justify-content: center;  /* Centers the button horizontally */
+  align-items: center;      /* Aligns the button vertically if necessary */
 }
 
 .submit-button {
@@ -269,6 +303,25 @@ body {
 
 .submit-button:hover {
   background-color: #10b981;
+}
+
+
+.submit-button {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.submit-button:hover {
+  background-color: red;
 }
 
 @media (max-width: 768px) {
