@@ -8,13 +8,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password_plain = trim($_POST["password"]);
     $confirm_password = trim($_POST["confirm_password"]);
 
-    // Password match check
     if ($password_plain !== $confirm_password) {
         echo json_encode(['status' => 'error', 'message' => 'Passwords do not match.']);
         exit;
     }
 
-    // Validate password complexity
     if (!preg_match('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$/', $password_plain)) {
         echo json_encode(['status' => 'error', 'message' => 'Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.']);
         exit;
@@ -22,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $password = password_hash($password_plain, PASSWORD_DEFAULT);
 
-    // Check for duplicate username or email
     $stmt = $conn->prepare("SELECT id FROM users WHERE username = ? OR email = ?");
     $stmt->bind_param("ss", $username, $email);
     $stmt->execute();
@@ -34,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $stmt->close();
 
-    // Insert new user into the database
     $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $username, $email, $password);
 
@@ -47,4 +43,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
-
