@@ -14,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['trip_id'])) {
     try {
         $pdo = getDatabaseConnection();
 
-        // Get user ID from session username
         $stmt = $pdo->prepare("SELECT id FROM users WHERE username = ?");
         $stmt->execute([$username]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -26,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['trip_id'])) {
 
         $userId = $user['id'];
 
-        // Ensure user owns the trip before deletion
         $stmt = $pdo->prepare("DELETE FROM plans WHERE id = ? AND user_id = ?");
         $stmt->execute([$tripId, $userId]);
 
