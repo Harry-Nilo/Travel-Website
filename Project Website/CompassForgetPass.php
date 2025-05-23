@@ -68,8 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $mail->isSMTP();
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'youremail@gmail.com';
-                    $mail->Password = 'google app password';
+                    $mail->Username = 'niloharryb07@gmail.com';
+                    $mail->Password = 'pdno dksx wxne uali';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port = 587;
 
@@ -119,11 +119,11 @@ body {
 }
 
 .forgot-container {
-    background-color: rgba(214, 240, 244, 0.7);
+    background: rgba(255, 255, 255, 0.85);
     padding: 30px;
     border-radius: 10px;
     border: 2px solid #333; /* Dark border */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
     animation: fadeIn 0.6s ease-in-out;
@@ -137,7 +137,7 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 25px;
-    color: #002D72;
+    color: #1e3a8a;
 }
 
 input {
@@ -152,7 +152,7 @@ input {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #002D72;
+    background-color: #1e3a8a;
     border: none;
     border-radius: 8px;
     color: white;
@@ -188,7 +188,7 @@ button:hover {
     text-align: center;
     margin-top: 15px;
     font-weight: bold;
-    color: #002D72;
+    color: #1e3a8a;
 }
 
 .reset-link:hover {
