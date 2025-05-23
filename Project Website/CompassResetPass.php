@@ -146,7 +146,6 @@ button:hover {
     }
 }
 
-/* Vertically center on large screens unless zoomed in */
 @media screen and (min-height: 700px) and (min-width: 500px) {
     body {
         align-items: center;
@@ -184,4 +183,3 @@ button:hover {
 </div>
 </body>
 </html>
-
