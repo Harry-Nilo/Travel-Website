@@ -31,6 +31,7 @@ if (!isset($_SESSION['user'])) {
     </div>
   </div>
 
+ <div class="page-wrapper">
   <section class="introduction">
     <h1>Adventure Planner</h1>
     <p>
@@ -38,6 +39,7 @@ if (!isset($_SESSION['user'])) {
     </p>
     <div id="chartdiv" style="width: 100%; height: 500px; border-radius: 8px;"></div>
   </section>
+</div>
 
   <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
   <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
