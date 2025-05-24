@@ -73,7 +73,7 @@ body {
 }
 
 .reset-container {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.5); ;
     padding: 30px;
     border-radius: 10px;
     border: 2px solid #333;
@@ -85,7 +85,7 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: black;
+    color: #F5C45E;
 }
 
 input {
@@ -100,10 +100,10 @@ input {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #1e3a8a;
+    background-color: #F5C45E;
     border: none;
     border-radius: 6px;
-    color: #fff;
+    color: #333;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -111,7 +111,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: rgb(245, 161, 5); ;
 }
 
 .error, .success {
@@ -146,6 +146,7 @@ button:hover {
     }
 }
 
+/* Vertically center on large screens unless zoomed in */
 @media screen and (min-height: 700px) and (min-width: 500px) {
     body {
         align-items: center;
