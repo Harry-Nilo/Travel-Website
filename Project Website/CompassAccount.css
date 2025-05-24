@@ -124,15 +124,20 @@ html, body {
   }
 }
 
+.account-info h2,
+.user-trips h2
+{color: #F5C45E}
+
 .account-info,
 .user-trips {
   width: min(600px, 90%);
   margin: 50px auto;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.5); 
   padding: 20px;
   border-radius: 10px;
   box-sizing: border-box;
   word-wrap: break-word;
+  color: #fff
 }
 
 
@@ -141,7 +146,7 @@ html, body {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  background: #fff;
+  color: #fff
 }
 
 .delete-trip-button {
@@ -154,7 +159,7 @@ html, body {
 }
 
 .change-password-link {
-  color: #1e3a8a;
+  color: #F5C45E;
   text-decoration: underline;
 }
 
@@ -170,7 +175,7 @@ html, body {
 }
 
 .toggle-button {
-  background-color: orange;
+  background-color: #F5C45E;
   color: white;
   font-weight: bold;
   border: none;
