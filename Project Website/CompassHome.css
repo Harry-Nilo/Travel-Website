@@ -13,16 +13,16 @@
 .navbar {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin: -20px;
-  height: auto; 
+  height: auto; /* changed from fixed 100px */
   margin-bottom: 2px;
   background-color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px; 
+  padding: 10px 20px; /* added some vertical padding */
   box-sizing: border-box;
-  flex-wrap: wrap; 
-  min-height: 80px; 
+  flex-wrap: wrap; /* allow wrapping on extreme zoom */
+  min-height: 80px; /* maintain some min height */
 }
 
 .nav-container {
@@ -35,7 +35,7 @@
   margin-top: 15px;
   gap: 10px;
   overflow: visible;
-  flex-wrap: wrap; 
+  flex-wrap: wrap; /* allow wrapping */
 }
 
 .logo {
@@ -46,7 +46,7 @@
   flex-shrink: 0;
   white-space: nowrap;
   margin-right: 20px;
-  margin-top: 10px; 
+  margin-top: 10px; /* added bottom margin for wrap spacing */
 }
 
 .nav-links {
@@ -59,8 +59,8 @@
   justify-content: flex-end;
   min-width: 200px;
   flex-wrap: wrap;
-  white-space: normal; 
-  overflow: visible; 
+  white-space: normal; /* allow breaking/wrapping */
+  overflow: visible; /* hide scrollbar completely */
 }
 
 .nav-links a {
@@ -70,14 +70,15 @@
   white-space: nowrap;
   padding: 5px 8px;
   transition: transform 0.3s ease, border-bottom 0.3s ease;
-  border-bottom: 2px solid transparent; 
+  border-bottom: 2px solid transparent; /* initial no underline */
 }
 
 .nav-links a:hover {
-  border-bottom: 2px solid #fff; 
+  border-bottom: 2px solid #fff; /* underline appears on hover */
 }
 
 
+/* Responsive tweaks remain */
 @media (max-width: 768px) {
   .nav-container {
     flex-wrap: wrap;
@@ -111,18 +112,19 @@
   }
 }
 
+/* PAGE CONTENT BELOW */
 .introduction {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.5); 
   padding: 1rem;
   margin: 1rem;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  color: #000000;
+  color: #fff;
 }
 
 .introduction h1 {
   font-size: 1.8rem;
-  color: #1e3a8a;
+  color: #F5C45E;
   margin-top: 0;
 }
 
@@ -146,16 +148,8 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 12px; 
   padding: 1rem;
-  color: black;
   margin-bottom: 1rem;
-}
-
-.card h2 {
-  color: #1e3a8a;;
 }
 
 .card img {
@@ -166,12 +160,11 @@
 }
 
 .feature-destination {
-  background: rgba(255, 255, 255, 0.85);
-
+  background: rgba(0, 0, 0, 0.5); 
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  color: #000000;
+  color: #fff;
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
@@ -180,13 +173,13 @@
 }
 
 .feature-destination h2 {
-  color: #1e3a8a;
+  color: #F5C45E;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .feature-destination h3 {
-  color: #1e3a8a;;
+  color: #F5C45E;
   font-size: 1.5rem;
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
@@ -211,7 +204,7 @@
 .feature-destination .details {
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #000000;
+  color: #fff;
   font-size: 1rem;
 }
 
@@ -226,10 +219,11 @@
 }
 
 .footer p {
-  margin: 0.2rem 0; 
+  margin: 0.2rem 0; /* Reduce top and bottom margin of each line */
 }
 
 
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
@@ -245,6 +239,7 @@
     margin: 0.5rem;
   }
 
+  /* Keep nav links horizontal but allow wrapping and smaller gaps */
   .nav-links {
     gap: 15px;
     justify-content: center;
@@ -289,4 +284,117 @@
   .card h2 {
     font-size: 1.2rem;
   }
+}
+
+.fly-fishing-card {
+  position: relative;
+  background-image: url('images/FlyFishing.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.fly-fishing-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1); /* Semi-transparent dark overlay */
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.fly-fishing-card h2
+{
+  color: #F5C45E;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+.fly-fishing-card p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.level-5-rapids-card {
+  position: relative;
+  background-image: url('images/Level5Rapids.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.level-5-rapids-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1); /* Semi-transparent dark overlay */
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.level-5-rapids-card h2
+{
+  color: #F5C45E;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.level-5-rapids-card p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.puget-sound-kayaking-card {
+  position: relative;
+  background-image: url('images/PugetSoundKayaking.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.puget-sound-kayaking-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1); /* Semi-transparent dark overlay */
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.puget-sound-kayaking-card h2
+{
+  color: #F5C45E;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.puget-sound-kayaking-card p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
