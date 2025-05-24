@@ -111,12 +111,12 @@ body {
 }
 
 .introduction {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.5); 
   padding: 1rem 3vw;        
   margin: 1rem auto;        
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  color: #000000;
+  color: #fff;
   max-width: 1000px;
   width: 100%;       
   box-sizing: border-box;
@@ -132,7 +132,7 @@ body {
 
 .introduction h1 {
   font-size: 1.8rem;
-  color: #1e3a8a;
+  color: #F5C45E;
   margin-top: 0;
   text-align: center;
 }
@@ -141,6 +141,7 @@ body {
   font-size: 1rem;
   margin-top: 0.5rem;
   text-align: center;
+  color: #F5C45E
 }
 
 #chartdiv {
@@ -161,7 +162,7 @@ body {
 .activity-section,
 .information-section,
 .submit-section {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.5); 
   padding: 1rem; 
   margin: 2rem auto;
   border-radius: 8px;
@@ -170,13 +171,18 @@ body {
 }
 
 .destination-section h2,
-.destination-section p,
 .activity-section h2,
-.activity-section p,
 .information-section h2,
-.information-section p,
 .submit-section h2{
   text-align: center;
+  color: #F5C45E
+}
+
+.destination-section p,
+.activity-section p,
+.information-section p{
+  text-align: center;
+  color: #F5C45E
 }
 
 .destination-row {
@@ -274,7 +280,7 @@ body {
 
 .destination-content h2 {
   margin-top: 0;
-  color: #1e3a8a;
+  color: #F5C45E;
   font-size: 1.5rem;
 }
 
@@ -310,14 +316,14 @@ body {
 .input-section label,
 .checkbox-section label {
   font-size: 1rem;
-  color: #1e3a8a;
+  color: #F5C45E;
   display: flex;
   align-items: center;
 }
 
 .input-section input {
   padding: 0.5rem;
-  border: 1px solid #1e3a8a;
+  border: 1px solid #fff;
   border-radius: 4px;
   width: 100%;
   max-width: 300px;
@@ -336,7 +342,7 @@ body {
 }
 
 .submit-button {
-  background-color: #1e3a8a;
+  background-color: #F5C45E;
   color: #ffffff;
   border: none;
   padding: 0.75rem 1.5rem;
