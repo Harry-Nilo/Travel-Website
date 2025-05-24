@@ -142,7 +142,7 @@ body {
 /* Sidebar */
 .sidebar {
   flex: 1 1 300px;
-  background: #e3efff;
+  background: rgba(0, 0, 0, 0.5); 
   padding: 1.5rem;
   border-radius: 8px;
   box-sizing: border-box;
@@ -151,7 +151,7 @@ body {
 
 .sidebar h2 {
   margin-bottom: 0.5rem;
-  color: #1e3a8a;
+  color: #F5C45E;
 }
 
 .sidebar ul {
@@ -163,6 +163,7 @@ body {
 .sidebar li {
   margin-bottom: 0.5rem;
   font-weight: bold;
+  color: #fff
 }
 
 /* Details list */
@@ -176,7 +177,7 @@ body {
   gap: 1rem;
   min-width: 0;
   scrollbar-width: thin;
-  scrollbar-color: #1a2b4c #e3efff;
+  scrollbar-color: #F5C45E #e3efff;
   padding-right: 3.5rem;
   box-sizing: border-box;
 }
@@ -184,7 +185,7 @@ body {
 /* Details panel */
 .details {
   flex: 2 1 600px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.5);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -196,13 +197,13 @@ body {
 
 .details h2 {
   font-size: 1.5rem;
-  color: #1e3a8a;
+  color: #F5C45E;
   margin-bottom: 1rem;
 }
 
 .details .price {
   font-size: 1rem;
-  color: #888;
+  color: #fff;
   font-weight: normal;
 }
 
@@ -212,6 +213,7 @@ body {
   word-break: break-word;
   white-space: normal;
   margin-bottom: 1rem;
+  color: #fff
 }
 
 .extras {
@@ -220,7 +222,7 @@ body {
 
 .view-photos {
   display: block;
-  background: #1e3a8a;
+  background: #F5C45E;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -231,7 +233,7 @@ body {
 }
 
 .view-photos:hover {
-  background: #001a4b;
+  background: rgb(245, 161, 5);
 }
 
 .things-content {
@@ -244,7 +246,7 @@ body {
 
 .toggle-things {
   cursor: pointer;
-  color: #1e3a8a;
+  color: #F5C45E;
   margin-left: 8px;
   user-select: none;
 }
@@ -323,7 +325,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #1e3a8a;
+  background: #F5C45E;
   color: #fff;
   border: none;
   border-radius: 50%;

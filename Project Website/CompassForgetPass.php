@@ -119,7 +119,7 @@ body {
 }
 
 .forgot-container {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.5); 
     padding: 30px;
     border-radius: 10px;
     border: 2px solid #333; 
@@ -137,7 +137,7 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 25px;
-    color: #1e3a8a;
+    color: #F5C45E;
 }
 
 input {
@@ -152,7 +152,7 @@ input {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #1e3a8a;
+    background-color: #F5C45E;
     border: none;
     border-radius: 8px;
     color: white;
@@ -163,7 +163,7 @@ button {
 }
 
 button:hover {
-    background-color: #001a4b;
+    background-color: rgb(245, 161, 5);
 }
 
 .error, .success {
@@ -188,7 +188,7 @@ button:hover {
     text-align: center;
     margin-top: 15px;
     font-weight: bold;
-    color: #1e3a8a;
+    color: #F5C45E;
 }
 
 .reset-link:hover {

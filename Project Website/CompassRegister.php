@@ -24,6 +24,13 @@
                     <button type="button" class="show-password" onclick="togglePassword('confirm_password')">Show</button>
                 </div>
 
+                <div style="margin: 1em 0;">
+                    <label>
+                        <input type="checkbox" id="terms" required>
+                        I agree to the <a href="TermsAndCondition.html" target="_blank">Terms and Conditions</a>
+                    </label>
+                </div>
+
                 <button type="submit">Register</button>
             </form>
             <p>Already have an account? <a href="CompassLogin.php">Login here</a></p>
@@ -44,6 +51,11 @@
 
             if (password !== confirm) {
                 alert("Passwords do not match.");
+                return;
+            }
+
+            if (!terms) {
+                alert("You must agree to the Terms and Conditions.");
                 return;
             }
 

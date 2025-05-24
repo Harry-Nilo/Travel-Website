@@ -54,7 +54,7 @@
       <div class="hover-detail">
         <p><h3>Be ready to go on a moment's notice. We will call you when the surf is pumping and fly you out for five mornings of hurricane 
           inspired summertime southern swells</h3></p> <h2>$960</br>includes lodging, food and airfare.</h2>
-          <button><a href="Travelog.php">More Details</a></button>
+          <button><a href="MoreDetails.html">More Details</a></button>
       </div>
     </div>
 
@@ -66,7 +66,7 @@
       <div class="hover-detail">
         <p><h3>Beautiful scenery combined with steep inclines and fast roads allowed for some great cycling. Don't forget the helmet!!</h3></p> 
         <h2>$1490</br>includes lodging, food and airfare.</h2>
-        <button><a href="Travelog.php">More Details</a></button>
+        <button><a href="MoreDetails.html">More Details</a></button>
       </div>
     </div>
 
@@ -78,7 +78,7 @@
       <div class="hover-detail">
         <p><h3>In this three day trip you'll scale the majestic cliffs of beautiful Devil's Tower Wyoming.</h3></p>
         <h2>$1490</br>includes lodging, food and airfare.</h2>
-        <button><a href="Travelog.php">More Details</a></button>
+        <button><a href="MoreDetails.html">More Details</a></button>
       </div>
     </div>
   </div>
