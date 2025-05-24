@@ -15,10 +15,10 @@ body {
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.5); 
     padding: 30px;
     border-radius: 10px;
-    border: 2px solid #333; 
+    border: 2px solid #333; /* Dark border */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     width: 100%;
     max-width: 400px;
@@ -29,7 +29,7 @@ h2 {
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: bold;
-    color: #1e3a8a;
+    color: #F5C45E;
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
@@ -44,14 +44,14 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
-    border-color: #1e3a8a;
+    border-color: #F5C45E;
     outline: none;
 }
 
 button[type="submit"] {
     width: 100%;
     padding: 12px;
-    background-color: #1e3a8a;
+    background-color: #F5C45E;
     border: none;
     border-radius: 5px;
     color: white;
@@ -63,12 +63,12 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #001a4b;
+    background-color: rgb(245, 161, 5);
 }
 
 a {
     text-decoration: none;
-    color: #1e3a8a;
+    color: #F5C45E;
     font-weight: bold;
 }
 
@@ -79,7 +79,7 @@ a:hover {
 p {
     text-align: center;
     font-size: 14px;
-    color: black;
+    color: #fff;
 }
 
 .container p:last-child {
@@ -93,7 +93,7 @@ p {
 
 .password-container input {
     width: 100%;
-    padding-right: 70px; 
+    padding-right: 70px; /* space for show button */
 }
 
 .show-password {
@@ -104,10 +104,10 @@ p {
     background: none;
     border: none;
     font-weight: bold;
-    color: #1e3a8a;
+    color: #F5C45E;
     cursor: pointer;
 }
 
 .show-password:hover {
-    color: #001a4b;
+    color: rgb(245, 161, 5);
 }
