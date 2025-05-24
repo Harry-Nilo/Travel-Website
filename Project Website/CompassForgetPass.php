@@ -68,12 +68,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $mail->isSMTP();
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'niloharryb07@gmail.com';
-                    $mail->Password = 'pdno dksx wxne uali';
+                    $mail->Username = 'travl.compass@gmail.com';
+                    $mail->Password = 'wqko jxoc vqjz xedm';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port = 587;
 
-                    $mail->setFrom('compasslogin@gmail.com', 'CompassMailer');
+                    $mail->setFrom('noreply@CompassTravel.com', 'Compass Travel Reset Code');
                     $mail->addAddress($email);
                     $mail->isHTML(true);
                     $mail->Subject = $subject;
